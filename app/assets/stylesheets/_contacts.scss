@@ -1,0 +1,72 @@
+.form-container {
+  width: 100%;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+}
+
+.form-box {
+  width: 40%;
+  margin: 30px auto 60px;
+  color: hsl(0, 0%, 13%);
+}
+
+.form-title {
+  margin-bottom: 1.5rem;
+  line-height: 3;
+  font-weight: 700;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #8d6a9f;
+  color: hsl(0, 0%, 13%);
+  box-shadow: 0 0 0 4px #b79fc3 !important;
+}
+
+.form-control.is-valid:focus {
+  border-color: #8d6a9f !important;
+  box-shadow: 0 0 0 4px #b79fc3 !important;
+}
+
+.form-actions {
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+
+.btn-c {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.1rem !important;
+  cursor: pointer;
+  padding: 10px 16px !important;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: 700 !important;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  transition: all 200ms ease;
+}
+
+.btn-send {
+  background: #8d6a9f;
+  color: white !important;
+  &:hover {
+    text-decoration: none !important;
+    background: #b79fc3;
+  }
+}
+
+.btn-nm {
+  background: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 13%);
+  &:hover {
+    color: hsl(0, 0%, 13%);
+    text-decoration: none !important;
+    background: hsl(0, 0%, 90%);
+  }
+}

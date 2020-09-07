@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
-  get 'contacts/create'
-  get 'new/create'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: "contacts#new"
+  resources :contact, only: [:new, :create]
 end

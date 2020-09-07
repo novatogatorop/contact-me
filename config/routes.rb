@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root to: "contacts#new"
-  resources :contact, only: [:new, :create]
+  post "/contacts", to: "contacts#create"
 end

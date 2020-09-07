@@ -1,6 +1,7 @@
 <div class="form-container">
-  <div class="form-box">
-    <h1 class="sign-title">Drop me a line</h1>
-    <%= render 'form', contact: @contact %>
-  </div>
+  <div class="form-box d-flex flex-column">
+      <h1>Thanks for your message!!</h1>
+      <p class="mt-4">I will get back to you soon.</p>
+      <div><%= link_to 'Drop Me A Line', root_path, class: "" %></div>
+    </div>
 </div>

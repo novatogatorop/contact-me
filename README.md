@@ -242,7 +242,7 @@ Let's assume that you already have a Rails application.
 
 21. Deploy your Rails app in Heroku. Follow **[this](https://github.com/novatogatorop/notebook/blob/master/heroku.md)** step.
 
-    Set the config vars on heroku, run:
+    After, set the config vars on heroku, run:
     
     ```ruby
     heroku config:set GMAIL_EMAIL=your-email@gmail.com
@@ -252,5 +252,7 @@ Let's assume that you already have a Rails application.
     then run:
     
     ```ruby
-    
+    git push origin master
+    git push heroku master
+    heroku run rails db:migrate
     ```

@@ -1,25 +1,30 @@
 ## Contact Form for Rails App
 Let's assume that you already have a Rails application. 
 
+
 1. Create model
 
    run `rails g model contact name email message:text`
    
+   
 2. Run `rails db:migrate`
 
-3. Run `ga . && gc -m 'generate contact model`
+   then run `ga . && gc -m 'generate contact model`
 
-4. Create controller
+
+3. Create controller
 
    run `rails g controller contacts new create`
    
-5. Run `ga . && gc -m 'generate contacts controller`
+   then run `ga . && gc -m 'generate contacts controller`
 
-6. Add bootstrap 
+
+4. Add bootstrap 
 
    run `yarn add bootstrap`
 
-7. Open Gemfile and add:
+
+5. Open Gemfile and add:
 
    ```ruby
    gem 'simple_form'
@@ -27,35 +32,40 @@ Let's assume that you already have a Rails application.
    gem 'invisible_captcha'
    ```
    
-8. Run `bundle install`
+   then run `bundle install`
+   
 
-9. Run the generator of simple_form and mail_form
+6. Run the generator of simple_form and mail_form
 
    ```ruby
    rails g simple_form install --bootstrap
    rails g mail_form
    ```
 
-10. Open `app/asset/stylesheets/application.css`
 
-    rename the file into `application.scss`
+7. Open `app/asset/stylesheets/application.css`
+
+   rename the file into `application.scss`
     
-    then add `@import "bootstrap/scss/bootstrap";`
+   then add `@import "bootstrap/scss/bootstrap";`
+    
  
-11. Open `routes.rb` and add:
+8. Open `routes.rb` and add:
 
-    ```ruby
-    Rails.application.routes.draw do
-      root to: "contacts#new"
-      post "/contacts", to: "contacts#create"
-    end
-    ```
+   ```ruby
+   Rails.application.routes.draw do
+     root to: "contacts#new"
+     post "/contacts", to: "contacts#create"
+   end
+   ```
     
-12. Remove or uncomment this line in `development.rb` and `production.rb`:
+    
+9. Remove or uncomment this line in `development.rb` and `production.rb`:
 
-    `config.action_mailer.raise_delivery_errors = false`
+   `config.action_mailer.raise_delivery_errors = false`
     
-13. Open `development.rb` and add:
+    
+10. Open `development.rb` and add:
 
     ```ruby
     config.action_mailer.default_url_options = { host: 'localhost:3000' }
@@ -70,6 +80,7 @@ Let's assume that you already have a Rails application.
       password: ENV['GMAIL_PASSWORD']
     }
     ```
+    
     
 14. Open `production.rb` and add:
 
@@ -87,11 +98,14 @@ Let's assume that you already have a Rails application.
       password: ENV['GMAIL_PASSWORD']
     }
     ```
+    
+    
 15. Open Gemfile and add:
 
     `gem 'dotenv-rails', groups: [:development, :test]`
     
-16. Run `bundle install`
+    then run `bundle install`
+    
 
 17. Create env file to store your email and password, run:
 
@@ -100,7 +114,8 @@ Let's assume that you already have a Rails application.
     echo '.env*' >> .gitignore
     ```
     
-18. Run `ga . && gc -m 'create dotenv'`
+    then run `ga . && gc -m 'create dotenv'`
+    
 
 19. Open `.env` and add:
 
@@ -130,8 +145,9 @@ Let's assume that you already have a Rails application.
        end
      end
      ```
- 
-21. Run `ga. && gc -m 'setup contact model`
+     
+     then run `ga. && gc -m 'setup contact model`
+     
 
 22. Setup controller. Open `contacts_controller.rb` and add:
 
@@ -162,7 +178,8 @@ Let's assume that you already have a Rails application.
     end
     ```
     
-24. Run `ga. && gc -m 'setup contacts controller`
+    then run `ga. && gc -m 'setup contacts controller`
+    
     
 25. Create partial form file, run:
 
@@ -208,4 +225,6 @@ Let's assume that you already have a Rails application.
     </div>
     ```
     
-28. Run `ga. && gc -m 'setup contacts controller and view`
+    then run `ga. && gc -m 'setup contacts controllers and views`
+    
+28. 

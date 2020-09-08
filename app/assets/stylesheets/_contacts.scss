@@ -62,11 +62,11 @@
 }
 
 .btn-nm {
-  background: hsl(0, 0%, 98%);
-  color: hsl(0, 0%, 13%);
+  background: hsl(0, 0%, 70%);
+  color: white !important;
   &:hover {
     color: hsl(0, 0%, 13%);
     text-decoration: none !important;
-    background: hsl(0, 0%, 90%);
+    background: hsl(0, 0%, 80%);
   }
 }

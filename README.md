@@ -87,3 +87,19 @@ Let's assume that you already have a Rails application.
       password: ENV['GMAIL_PASSWORD']
     }
     ```
+15. Open Gemfile and add:
+
+    `gem 'dotenv-rails', groups: [:development, :test]`
+    
+16. Run `bundle install`
+
+17. Create env file to store your email and password, run:
+
+    ```ruby
+    touch .env
+    echo '.env*' >> .gitignore
+    ```
+    
+18. Run `ga . && gc -m 'create dotenv'`
+
+19. 

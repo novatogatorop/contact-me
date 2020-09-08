@@ -17,6 +17,8 @@ Let's assume that you already have a Rails application.
    run `rails g controller contacts new create`
    
    then run `ga . && gc -m 'generate contacts controller`
+   
+   and `git push origin master/brach-name`
 
 
 4. Add bootstrap 
@@ -116,6 +118,8 @@ Let's assume that you already have a Rails application.
     
     then run `ga . && gc -m 'create dotenv'`
     
+    and `git push origin master/brach-name`
+    
 
 14. Open `.env` and add:
 
@@ -148,6 +152,8 @@ Let's assume that you already have a Rails application.
      
      then run `ga. && gc -m 'setup contact model`
      
+     and `git push origin master/brach-name`
+     
 
 16. Setup controller. Open `contacts_controller.rb` and add:
 
@@ -179,6 +185,8 @@ Let's assume that you already have a Rails application.
     ```
     
     then run `ga. && gc -m 'setup contacts controller`
+    
+    and `git push origin master/brach-name`
     
     
 17. Create partial form file, run:
@@ -227,11 +235,22 @@ Let's assume that you already have a Rails application.
     
     then run `ga. && gc -m 'setup contacts controllers and views`
     
-20. Modify the form, open `app/assets/stylesheets/application.scss` and add:
+    and `git push origin master/brach-name`
+    
+    
+20. Modify form and views **[here](https://github.com/novatogatorop/drop-me-a-line/blob/master/app/assets/stylesheets/_contacts.scss)**.
 
+21. Deploy your Rails app in Heroku. Follow **[this](https://github.com/novatogatorop/notebook/blob/master/heroku.md)** step.
+
+    Set the config vars on heroku, run:
+    
     ```ruby
-    // External libraries
-    @import "bootstrap/scss/bootstrap";
-
-
-21. 
+    heroku config:set GMAIL_EMAIL=your-email@gmail.com
+    heroku config:set GMAIL_PASSWORD=abcdefghij
+    ```
+    
+    then run:
+    
+    ```ruby
+    
+    ```

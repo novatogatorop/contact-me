@@ -1,2 +1,2 @@
-# README
-Contact form in Rails app
+## Contact Form for Rails App
+Let's assume that you already have a Rails application. 

@@ -1,25 +1,25 @@
 ## Contact Form for Rails App
 Let's assume that you already have a Rails application. 
 
-1. create model
+1. Create model
 
-   `rails g model contact name email message:text`
+   run `rails g model contact name email message:text`
    
-2. run `rails db:migrate`
+2. Run `rails db:migrate`
 
-3. run `ga . && gc -m 'generate contact model`
+3. Run `ga . && gc -m 'generate contact model`
 
-4. create controller
+4. Create controller
 
-   `rails g controller contacts new create`
+   run `rails g controller contacts new create`
    
-5. run `ga . && gc -m 'generate contacts controller`
+5. Run `ga . && gc -m 'generate contacts controller`
 
-6. add bootstrap 
+6. Add bootstrap 
 
    run `yarn add bootstrap`
 
-7. open Gemfile and add:
+7. Open Gemfile and add:
 
    ```ruby
    gem 'simple_form'
@@ -27,6 +27,16 @@ Let's assume that you already have a Rails application.
    gem 'invisible_captcha'
    ```
    
-8. run `bundle install`
+8. Run `bundle install`
 
-9. run 
+9. Run simple_form and mail_form generator
+   ```ruby
+   rails g simple_form install --bootstrap
+   rails g mail_form
+   ```
+
+10. Open `app/asset/stylesheets/application.css`
+    rename the file into ``application.scss`
+    then add `@import "bootstrap/scss/bootstrap";`
+ 
+11. 

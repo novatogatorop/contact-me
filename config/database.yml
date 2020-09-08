@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: drop-me-a-line-test_development
+  database: drop-me-a-line-test-development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

@@ -102,4 +102,13 @@ Let's assume that you already have a Rails application.
     
 18. Run `ga . && gc -m 'create dotenv'`
 
-19. 
+19. Open `.env` and add:
+
+    ```ruby
+    GMAIL_EMAIL=your-email@gmail.com
+    GMAIL_PASSWORD=abcdefghij
+    ```
+    
+    **You should share app password not actual password. Follow [this](https://support.google.com/mail/answer/185833?hl=en-GB) to create one (for gmail)**
+    
+ 20. 

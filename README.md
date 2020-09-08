@@ -168,7 +168,44 @@ Let's assume that you already have a Rails application.
 
     `touch app/views/contacts/_form.html.erb`
     
-    then add 
+    then add:
     
+    ```ruby
+    <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name, required: true %>
+        <%= f.input :email, required: true %>
+        <%= f.input :message, as: :text, required: true %>
+        <%= f.invisible_captcha :subtitle %>
+      </div>
+      <div class="form-actions mt-5">
+        <a href="https://64.media.tumblr.com/tumblr_m2oxi5nGWI1rr3l61o1_500.png" class="btn-c btn-nm mr-auto">Never Mind</a>
+        <%= f.button :submit, "Send", class: "btn-c btn-send" %>
+      </div>
+    <% end %>
+    ```
     
+26. Open `app/views/contacts/new.html.erb` and add:
+
+    ```ruby
+    <div class="form-container">
+      <div class="form-box">
+        <h1 class="form-title">Drop me a line here!</h1>
+        <%= render 'form', contact: @contact %>
+      </div>
+    </div>
+    ```
     
+27. Open `app/views/contacts/create.html.erb` and add:
+
+    ```ruby
+    <div class="form-container">
+      <div class="form-box d-flex flex-column">
+          <h1 class="form-title">Thanks for your message!!</h1>
+          <p class="mb-5">I will get back to you soon.</p>
+          <div class="mt-5"><%= link_to 'Drop Me A Line', root_path, class: "btn-c btn-send" %></div>
+        </div>
+    </div>
+    ```
+    
+28. Run `ga. && gc -m 'setup contacts controller and view`

@@ -109,6 +109,66 @@ Let's assume that you already have a Rails application.
     GMAIL_PASSWORD=abcdefghij
     ```
     
-    **You should share app password not actual password. Follow [this](https://support.google.com/mail/answer/185833?hl=en-GB) to create one (for gmail)**
+    * You should share `app password`, ~~not actual password~~. Follow [this](https://support.google.com/mail/answer/185833?hl=en-GB) to create one (for gmail).
     
- 20. 
+ 20. Setup model. Open `contact.rb` and add:
+ 
+     ```ruby
+     class Contact < MailForm::Base
+       attribute :name, validate: true
+       attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+       attribute :message, validate: true
+     
+       # Declare the e-mail headers. It accepts anything the mail method
+       # in ActionMailer accepts.
+       def headers
+         {
+           subject: "Contact Form",
+           to: "your-email@gmail.com",
+           from: %("#{name}" <#{email}>)
+         }
+       end
+     end
+     ```
+ 
+21. Run `ga. && gc -m 'setup contact model`
+
+22. Setup controller. Open `contacts_controller.rb` and add:
+
+    ```ruby
+    class ContactsController < ApplicationController
+      require 'mail_form'
+      invisible_captcha only: [:create, :update], honeypot: :subtitle
+    
+      def new
+        @contact = Contact.new
+      end
+    
+      def create
+        @contact = Contact.new(contact_params)
+        if @contact.deliver
+          flash.now[:error] = nil
+        else
+          flash.now[:error] = 'Cannot send message'
+          render 'contacts/new'
+        end
+      end
+    
+      private
+    
+      def contact_params
+        params.require(:contact).permit(:name, :email, :message, :subtitle)
+      end
+    end
+    ```
+    
+24. Run `ga. && gc -m 'setup contacts controller`
+    
+25. Create partial form file, run:
+
+    `touch app/views/contacts/_form.html.erb`
+    
+    then add 
+    
+    
+    

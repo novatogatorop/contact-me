@@ -82,7 +82,7 @@ Let's assume that you already have a Rails application.
     ```
     
     
-14. Open `production.rb` and add:
+11. Open `production.rb` and add:
 
     ```ruby
     config.action_mailer_default_url_options = { host: 'https://gmail.com' }
@@ -100,14 +100,14 @@ Let's assume that you already have a Rails application.
     ```
     
     
-15. Open Gemfile and add:
+12. Open Gemfile and add:
 
     `gem 'dotenv-rails', groups: [:development, :test]`
     
     then run `bundle install`
     
 
-17. Create env file to store your email and password, run:
+13. Create env file to store your email and password, run:
 
     ```ruby
     touch .env
@@ -117,7 +117,7 @@ Let's assume that you already have a Rails application.
     then run `ga . && gc -m 'create dotenv'`
     
 
-19. Open `.env` and add:
+14. Open `.env` and add:
 
     ```ruby
     GMAIL_EMAIL=your-email@gmail.com
@@ -126,7 +126,7 @@ Let's assume that you already have a Rails application.
     
     * You should share `app password`, ~~not actual password~~. Follow [this](https://support.google.com/mail/answer/185833?hl=en-GB) to create one (for gmail).
     
- 20. Setup model. Open `contact.rb` and add:
+ 15. Setup model. Open `contact.rb` and add:
  
      ```ruby
      class Contact < MailForm::Base
@@ -149,7 +149,7 @@ Let's assume that you already have a Rails application.
      then run `ga. && gc -m 'setup contact model`
      
 
-22. Setup controller. Open `contacts_controller.rb` and add:
+16. Setup controller. Open `contacts_controller.rb` and add:
 
     ```ruby
     class ContactsController < ApplicationController
@@ -181,7 +181,7 @@ Let's assume that you already have a Rails application.
     then run `ga. && gc -m 'setup contacts controller`
     
     
-25. Create partial form file, run:
+17. Create partial form file, run:
 
     `touch app/views/contacts/_form.html.erb`
     
@@ -202,7 +202,7 @@ Let's assume that you already have a Rails application.
     <% end %>
     ```
     
-26. Open `app/views/contacts/new.html.erb` and add:
+18. Open `app/views/contacts/new.html.erb` and add:
 
     ```ruby
     <div class="form-container">
@@ -213,7 +213,7 @@ Let's assume that you already have a Rails application.
     </div>
     ```
     
-27. Open `app/views/contacts/create.html.erb` and add:
+19. Open `app/views/contacts/create.html.erb` and add:
 
     ```ruby
     <div class="form-container">
@@ -227,4 +227,11 @@ Let's assume that you already have a Rails application.
     
     then run `ga. && gc -m 'setup contacts controllers and views`
     
-28. 
+20. Modify the form, open `app/assets/stylesheets/application.scss` and add:
+
+    ```ruby
+    // External libraries
+    @import "bootstrap/scss/bootstrap";
+
+
+21. 

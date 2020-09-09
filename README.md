@@ -256,22 +256,24 @@ Let's assume that you already have a Rails application and you own the github re
     
     merge contact-form branch to master `git pull origin master`
     
-    
+    Do step **number 21** to test contact form
     
 
-22. Deploy your contact form in Heroku. Follow **[this](https://github.com/novatogatorop/notebook/blob/master/heroku.md)** step.
-
-    After, set the config vars on heroku, run:
+24. Deploy contact form in Heroku. Run:
+    
+    ```ruby
+    git push heroku master
+    heroku run rails db:migrate
+    ```
+    
+ 25 Set the .env file config vars in on heroku, run:
     
     ```ruby
     heroku config:set GMAIL_EMAIL=your-email@gmail.com
     heroku config:set GMAIL_PASSWORD=abcdefghij
     ```
     
-    then run:
+    then run `heroku open` then fill out the form in the browser and check your email if you receive the contact form.
     
-    ```ruby
-    git push origin master
-    git push heroku master
-    heroku run rails db:migrate
-    ```
+    
+    

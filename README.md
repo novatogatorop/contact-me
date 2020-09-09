@@ -1,7 +1,11 @@
-# Contact Form for Rails App
-Let's assume that you already have a Rails application and you own the github repository. 
+# Contact Form for Rails App in 26 steps
+
+![](drop-me-a-line.gif)
+
 
 ## Usage
+
+Let's assume that you already have a Rails application and you own the github repository. 
 
 1. Before creating a new branch, pull the changes from master. Your master needs to be up to date, Run:
 

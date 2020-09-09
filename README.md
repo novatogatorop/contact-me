@@ -1,4 +1,4 @@
-# Contact Form for Rails App in 26 steps
+# Contact Form for Rails App in 25 steps
 
 ![](drop-me-a-line.gif)
 
@@ -266,23 +266,24 @@ Let's assume that you already have a Rails application and you own the github re
     Do step **number 21** to test contact form
     
 
-24. Deploy contact form in Heroku. Run:
+24. Set the .env file config vars in on heroku, run:
+    
+   ```ruby
+   heroku config:set GMAIL_EMAIL=your-email@gmail.com
+   heroku config:set GMAIL_PASSWORD=abcdefghij
+   ```
+    
+
+25. Deploy contact form in Heroku. Run:
     
     ```ruby
     git push heroku master
     heroku run rails db:migrate
     ```
-    
- 25 Set the .env file config vars in on heroku, run:
-    
-    ```ruby
-    heroku config:set GMAIL_EMAIL=your-email@gmail.com
-    heroku config:set GMAIL_PASSWORD=abcdefghij
-    ```
-    
-26. Run `heroku open` 
 
-    then fill out the form in the browser and check your email if you receive the contact form.
+   open rails app in heroku, run `heroku open` 
+
+   then fill out the form in the browser and check your email if you receive the contact form.
     
     
     

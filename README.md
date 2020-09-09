@@ -273,7 +273,9 @@ Let's assume that you already have a Rails application and you own the github re
     heroku config:set GMAIL_PASSWORD=abcdefghij
     ```
     
-    then run `heroku open` then fill out the form in the browser and check your email if you receive the contact form.
+26. Run `heroku open` 
+
+    then fill out the form in the browser and check your email if you receive the contact form.
     
     
     

@@ -16,14 +16,14 @@ Let's assume that you already have a Rails application and you own the github re
    
 2. Run `rails db:migrate`
 
-   then run `ga . && gc -m 'generate contact model`
+   commit change, run `ga . && gc -m 'generate contact model`
 
 
 3. Create controller
 
    run `rails g controller contacts new create`
    
-   then run `ga . && gc -m 'generate contacts controller`
+   commit change, run `ga . && gc -m 'generate contacts controller`
 
 
 4. Add bootstrap 
@@ -121,7 +121,7 @@ Let's assume that you already have a Rails application and you own the github re
     echo '.env*' >> .gitignore
     ```
     
-    then run `ga . && gc -m 'create dotenv'`
+    commit change, run `ga . && gc -m 'create dotenv'`
     
 
 14. Open `.env` and add:
@@ -132,6 +132,7 @@ Let's assume that you already have a Rails application and you own the github re
     ```
     
     * You should share `app password`, ~~not actual password~~. Follow [this](https://support.google.com/mail/answer/185833?hl=en-GB) to create one (for gmail).
+    
     
  15. Setup model. Open `contact.rb` and add:
  
@@ -153,7 +154,7 @@ Let's assume that you already have a Rails application and you own the github re
      end
      ```
      
-     then run `ga . && gc -m 'setup contact model`
+     commit change, run `ga . && gc -m 'setup contact model`
      
 
 16. Setup controller. Open `contacts_controller.rb` and add:
@@ -185,7 +186,7 @@ Let's assume that you already have a Rails application and you own the github re
     end
     ```
     
-    then run `ga . && gc -m 'setup contacts controller`
+    commit change, run `ga . && gc -m 'setup contacts controller`
     
     
 17. Create partial form file, run:
@@ -208,7 +209,8 @@ Let's assume that you already have a Rails application and you own the github re
       </div>
     <% end %>
     ```
-    
+   
+   
 18. Open `app/views/contacts/new.html.erb` and add:
 
     ```ruby
@@ -219,7 +221,8 @@ Let's assume that you already have a Rails application and you own the github re
       </div>
     </div>
     ```
-    
+  
+  
 19. Open `app/views/contacts/create.html.erb` and add:
 
     ```ruby
@@ -232,7 +235,7 @@ Let's assume that you already have a Rails application and you own the github re
     </div>
     ```
     
-    then run `ga . && gc -m 'setup contacts controllers and views`
+    commit change, run `ga . && gc -m 'setup contacts controllers and views`
     
     
 20. Modify form and views **[here](https://github.com/novatogatorop/drop-me-a-line/blob/master/app/assets/stylesheets/_contacts.scss)**.

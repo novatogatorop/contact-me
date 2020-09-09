@@ -1,5 +1,12 @@
 ## Contact Form for Rails App
-Let's assume that you already have a Rails application. 
+Let's assume that you already have a Rails application and you own the github repository. 
+
+
+1. Before creating a new branch, pull the changes from master. Your master needs to be up to date, Run:
+
+   `git pull origin master`
+   
+   then create new branch `git checkout -b contact-form`
 
 
 1. Create model
@@ -17,8 +24,6 @@ Let's assume that you already have a Rails application.
    run `rails g controller contacts new create`
    
    then run `ga . && gc -m 'generate contacts controller`
-   
-   and `git push origin master/brach-name`
 
 
 4. Add bootstrap 
@@ -118,8 +123,6 @@ Let's assume that you already have a Rails application.
     
     then run `ga . && gc -m 'create dotenv'`
     
-    and `git push origin master/brach-name`
-    
 
 14. Open `.env` and add:
 
@@ -150,9 +153,7 @@ Let's assume that you already have a Rails application.
      end
      ```
      
-     then run `ga. && gc -m 'setup contact model`
-     
-     and `git push origin master/brach-name`
+     then run `ga . && gc -m 'setup contact model`
      
 
 16. Setup controller. Open `contacts_controller.rb` and add:
@@ -184,9 +185,7 @@ Let's assume that you already have a Rails application.
     end
     ```
     
-    then run `ga. && gc -m 'setup contacts controller`
-    
-    and `git push origin master/brach-name`
+    then run `ga . && gc -m 'setup contacts controller`
     
     
 17. Create partial form file, run:
@@ -233,14 +232,23 @@ Let's assume that you already have a Rails application.
     </div>
     ```
     
-    then run `ga. && gc -m 'setup contacts controllers and views`
-    
-    and `git push origin master/brach-name`
+    then run `ga . && gc -m 'setup contacts controllers and views`
     
     
 20. Modify form and views **[here](https://github.com/novatogatorop/drop-me-a-line/blob/master/app/assets/stylesheets/_contacts.scss)**.
 
-21. Deploy your Rails app in Heroku. Follow **[this](https://github.com/novatogatorop/notebook/blob/master/heroku.md)** step.
+
+21. Run `rails s`
+
+    open [localhost:3000](localhost:3000) then fill out the form and check your email if you receive the contact form.
+    
+
+22. Push branch to github, run `git push origin contact-form`
+
+    open your github 
+    
+
+22. Deploy your contact form in Heroku. Follow **[this](https://github.com/novatogatorop/notebook/blob/master/heroku.md)** step.
 
     After, set the config vars on heroku, run:
     

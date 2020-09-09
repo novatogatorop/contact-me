@@ -141,25 +141,25 @@ Let's assume that you already have a Rails application and you own the github re
     
  15. Setup model. Open `contact.rb` and add:
  
-    ```ruby
-    class Contact < MailForm::Base
-     attribute :name, validate: true
-     attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-     attribute :message, validate: tr
+     ```ruby
+     class Contact < MailForm::Base
+      attribute :name, validate: true
+      attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+      attribute :message, validate: tr
  
-     # Declare the e-mail headers. It accepts anything the mail method
-     # in ActionMailer accepts.
-     def headers
+      # Declare the e-mail headers. It accepts anything the mail method
+      # in ActionMailer accepts.
+      def headers
        {
          subject: "Contact Form",
          to: "your-email@gmail.com",
          from: %("#{name}" <#{email}>)
        }
+      end
      end
-    end
-    ```
+     ```
      
-    commit change, run `ga . && gc -m 'setup contact model`
+     commit change, run `ga . && gc -m 'setup contact model`
      
 
 16. Setup controller. Open `contacts_controller.rb` and add:

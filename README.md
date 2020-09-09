@@ -245,7 +245,18 @@ Let's assume that you already have a Rails application and you own the github re
 
 22. Push branch to github, run `git push origin contact-form`
 
-    open your github 
+    open your github to create `pull request`
+    
+    then `merge the pull request`
+    
+
+23. Make sure your contact-form branch is clean, run `gst`
+
+    switch to master branch `gco master`
+    
+    merge contact-form branch to master `git pull origin master`
+    
+    
     
 
 22. Deploy your contact form in Heroku. Follow **[this](https://github.com/novatogatorop/notebook/blob/master/heroku.md)** step.

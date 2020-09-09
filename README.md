@@ -1,6 +1,7 @@
-## Contact Form for Rails App
+# Contact Form for Rails App
 Let's assume that you already have a Rails application and you own the github repository. 
 
+## Usage
 
 1. Before creating a new branch, pull the changes from master. Your master needs to be up to date, Run:
 
@@ -9,12 +10,11 @@ Let's assume that you already have a Rails application and you own the github re
    then create new branch `git checkout -b contact-form`
 
 
-1. Create model
+2. Create model
 
    run `rails g model contact name email message:text`
    
-   
-2. Run `rails db:migrate`
+   migrate contacts table to database `rails db:migrate`
 
    commit change, run `ga . && gc -m 'generate contact model`
 

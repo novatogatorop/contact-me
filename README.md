@@ -145,7 +145,7 @@ Let's assume that you already have a Rails application and you own the github re
      class Contact < MailForm::Base
       attribute :name, validate: true
       attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-      attribute :message, validate: tr
+      attribute :message, validate: true
  
       # Declare the e-mail headers. It accepts anything the mail method
       # in ActionMailer accepts.

@@ -9,15 +9,8 @@ Let's assume that you already have a Rails application and you own the github re
 
 **1.** Before creating a new branch, pull the changes from master. Your master needs to be up to date, run:
 
-       `git pull origin master`
-       
-       
-       
-       
-       
-       
-       
-   
+   `git pull origin master`
+
    then create new branch `git checkout -b contact-form`
 
 

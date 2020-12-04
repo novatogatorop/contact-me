@@ -1,8 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.action_mailer_default_url_options = { host: 'https://gmail.com' }
-  Rails.application.routes.default_url_options[:host] = 'https://gmail.com'
+  config.action_mailer_default_url_options = { host: "drop-me-a-line.herokuapp.com" }
+  # Rails.application.routes.default_url_options[:host] = 'https://gmail.com'
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
